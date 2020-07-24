@@ -1,4 +1,4 @@
-{% set version = '0.4.3' %}
+{% set version = "0.4.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WebGestaltR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WebGestaltR/WebGestaltR_{{ version }}.tar.gz
-  sha256: 20eb41e6fa33a25369b0009d393e9c405a2cfcaf7f0e62043fdaa33663450650
+  sha256: d68a431a5e076c0cfdddf769ab5a6759eb0e2db68f673ba35a654c08904eeee5
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -70,17 +70,11 @@ test:
 about:
   home: https://github.com/bzhanglab/WebGestaltR
   license: LGPL-3.0-only
-  summary: The web version WebGestalt <http://www.webgestalt.org> supports 12 organisms, 354
-    gene identifiers and 321,251 function categories. Users can upload the data and
-    functional categories with their own gene identifiers. In addition to the Over-Representation
-    Analysis, WebGestalt also supports Gene Set Enrichment Analysis and Network Topology
-    Analysis. The user-friendly output report allows interactive and efficient exploration
-    of enrichment results. The WebGestaltR package not only supports all above functions
-    but also can be integrated into other pipeline or simultaneously analyze multiple
-    gene lists.
+  summary: The web version WebGestalt <http://www.webgestalt.org> supports 12 organisms, 354 gene identifiers and 321,251 function categories. Users can upload the data and functional categories with their own gene identifiers. In addition to the Over-Representation Analysis, WebGestalt also supports Gene Set Enrichment
+    Analysis and Network Topology Analysis. The user-friendly output report allows interactive and efficient exploration of enrichment results. The WebGestaltR package not only supports all above functions but also can be integrated into other pipeline or simultaneously analyze multiple gene lists.
   license_family: LGPL
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
 
 extra:
   recipe-maintainers:
