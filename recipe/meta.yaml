@@ -1,4 +1,4 @@
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/WebGestaltR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/WebGestaltR/WebGestaltR_{{ version }}.tar.gz
-  sha256: b0b42d91c3d6b62d67bb4747d568628d5f671c75df0fa0c4b80860a0aacd530b
+  sha256: bc7fe30fe44f1aaf84e5963988f33490864e3a1c662f52bb4f764855136f8af7
 
 build:
   merge_build_host: true  # [win]
